@@ -21,7 +21,7 @@ module IceCube
     protected
 
     def default_jump(date, attempt_count = nil)
-      goal = date + IceCube::ONE_DAY * @interval
+      goal = date + (IceCube::ONE_DAY * @interval).seconds
       adjust(goal, date)
     end
 

@@ -23,7 +23,7 @@ module IceCube
       months.compact!
       # go to the closest distance away
       goal = date
-      months.min.times { goal += TimeUtil.days_in_month(goal) * IceCube::ONE_DAY }
+      months.min.times { goal += (TimeUtil.days_in_month(goal) * IceCube::ONE_DAY).seconds }
       self.class.adjust(goal, date)
     end
 

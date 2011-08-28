@@ -23,7 +23,7 @@ module IceCube
       seconds.compact!
       # go to the closest distance away
       closest_second = seconds.min
-      goal = date + closest_second
+      goal = date + closest_second.seconds
       self.class.adjust(goal, date)
     end
 

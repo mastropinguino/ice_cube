@@ -20,7 +20,7 @@ module IceCube
     protected
     
     def default_jump(date, attempt_count = nil)
-      date + IceCube::ONE_MINUTE
+      date + IceCube::ONE_MINUTE.seconds
     end
 
     private

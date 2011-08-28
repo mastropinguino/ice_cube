@@ -23,7 +23,7 @@ module IceCube
       minutes.compact!
       # go to the closest distance away, the beginning of that minute
       closest_minute = minutes.min
-      goal = date + closest_minute * IceCube::ONE_MINUTE
+      goal = date + (closest_minute * IceCube::ONE_MINUTE).seconds
       self.class.adjust(goal, date)
     end
     

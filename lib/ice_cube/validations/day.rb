@@ -22,7 +22,7 @@ module IceCube
       end
       days.compact!
       # go to the closest distance away, the start of that day
-      goal = date + days.min * IceCube::ONE_DAY
+      goal = date + (days.min * IceCube::ONE_DAY).seconds
       self.class.adjust(goal, date)
     end
   

@@ -34,7 +34,7 @@ module IceCube
       distances = distances.select { |d| d > 0 }
       return nil if distances.empty?
       # return the start of the proper day
-      goal = date + distances.min * IceCube::ONE_DAY
+      goal = date + (distances.min * IceCube::ONE_DAY).seconds
       self.class.adjust(goal, date)
     end
   
